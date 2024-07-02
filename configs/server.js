@@ -13,7 +13,7 @@ import postRoutes from '../src/posts/post.routes.js'
 class ExpressServer {
     constructor(){
         this.app = express();
-        this.port = process.env.PORT;
+        this.port = process.env.PORT || 3001;
         this.postPath = '/blog/v2'
 
         this.middlewares();
@@ -21,8 +21,8 @@ class ExpressServer {
         this.routes();
     }
 
-    conectarDB(){
-     dbConnection();
+    async conectarDB(){
+     await dbConnection();
     }
 
     middlewares(){

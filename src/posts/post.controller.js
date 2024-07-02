@@ -49,7 +49,7 @@ export const addcommentToPost = async (req, res) => {
 
     postInfo.comment.push({ name, text });
 
-    await postInfo;
+    await postInfo.save();
 
     res.status(200).json({
       postInfo,
