@@ -3,5 +3,5 @@ config();
 
 import ExpressServer from "./configs/server.js";
 
-const server = ExpressServer();
+const server = new ExpressServer();
 server.listen();

@@ -16,12 +16,13 @@ class ExpressServer {
         this.port = process.env.PORT;
         this.postPath = '/blog/v2'
 
+        this.middlewares();
         this.conectarDB();
         this.routes();
     }
 
-    async conectarDB(){
-        await dbConnection();
+    conectarDB(){
+     dbConnection();
     }
 
     middlewares(){
